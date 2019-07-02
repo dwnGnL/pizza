@@ -1,0 +1,37 @@
+request
+{
+    pizzas: [
+        {
+              "name": "quardo formadji",
+            "count": 8,
+        },
+        {
+            "name" :"Margarita",
+            "count": 10
+        }
+    ]
+}
+
+response
+{
+    pizzas: [
+        {
+            "name": "quardo formadji",
+            "count": 8,
+            "sum" : 510
+        }
+    ],
+    date: "31.06.2019 14:03:57",
+    totalSum: 1500
+}
+
+Роуты
+1. Показать меню пиццы
+2. Покупка пиццы
+3. Просмотр журнала покупок
+
+
+1. Подключить gin gonic.
+2. Подключить логгирование.
+3*. Подключить логгирование gorm.
+4. Почитать о горм. gorm.io
