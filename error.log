@@ -1,0 +1,12 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /menu                     --> pizza/utils.GetMenu (4 handlers)
+[GIN-debug] POST   /buy                      --> pizza/utils.BuyPizza (4 handlers)
+[GIN-debug] GET    /trans                    --> pizza/utils.Trans (4 handlers)
+[GIN-debug] Listening and serving HTTP on :8001
+time="2019-07-04T14:22:53+05:00" level=debug msg="SELECT * FROM `trans`  " source="C:/Users/nGnL/go/src/pizza/utils/utils.go:66" took="998.9µs"
+[GIN] 2019/07/04 - 14:22:53 | 200 |     51.9684ms |             ::1 | GET      /trans

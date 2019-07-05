@@ -4,16 +4,17 @@
  - using env:	export GIN_MODE=release
  - using code:	gin.SetMode(gin.ReleaseMode)
 
-2019/07/02 12:54:12 &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc00027a000 false 2 0xc0002a8000 <nil> {{0 0} {<nil>} map[] 0} 0xc0002444e0 0xfb2d20 0xc000004540 false <nil>}
-[GIN-debug] GET    /menu                     --> pizza/utils.GetMenu (5 handlers)
-[GIN-debug] POST   /buy                      --> pizza/utils.BuyPizza (5 handlers)
-[GIN-debug] GET    /trans                    --> pizza/utils.Trans (5 handlers)
+[GIN-debug] GET    /menu                     --> pizza/utils.GetMenu (4 handlers)
+[GIN-debug] POST   /buy                      --> pizza/utils.BuyPizza (4 handlers)
+[GIN-debug] GET    /trans                    --> pizza/utils.Trans (4 handlers)
 [GIN-debug] Listening and serving HTTP on :8001
-::1 - [Tue, 02 Jul 2019 12:54:20 +05] "GET /trans HTTP/1.1 200 2.0008ms "PostmanRuntime/7.15.0" "
-[GIN] 2019/07/02 - 12:54:20 | 200 |      2.9978ms |             ::1 | GET      /trans
-::1 - [Tue, 02 Jul 2019 12:54:26 +05] "GET /trans HTTP/1.1 200 0s "PostmanRuntime/7.15.0" "
-[GIN] 2019/07/02 - 12:54:26 | 200 |       1.001ms |             ::1 | GET      /trans
-2019/07/02 12:57:36 [{1 Маргарита 20 35} {2 мясная 30 35}]
-2019/07/02 12:57:36 &{[{Маргарита 1 20} {Маргарита 8 160}] 02.07.2019 12:57:36 0}
-::1 - [Tue, 02 Jul 2019 12:57:36 +05] "POST /buy HTTP/1.1 200 306.8077ms "PostmanRuntime/7.15.0" "
-[GIN] 2019/07/02 - 12:57:36 | 200 |    307.8102ms |             ::1 | POST     /buy
+time="2019-07-04T14:17:05+05:00" level=debug msg="SELECT * FROM `menu`  " source="C:/Users/nGnL/go/src/pizza/utils/utils.go:15" took=1.0028ms
+[GIN] 2019/07/04 - 14:17:05 | 200 |     51.9672ms |             ::1 | GET      /menu
+time="2019-07-04T14:17:27+05:00" level=debug msg="SELECT * FROM `trans`  " source="C:/Users/nGnL/go/src/pizza/utils/utils.go:66" took="998.9µs"
+[GIN] 2019/07/04 - 14:17:27 | 200 |       998.9µs |             ::1 | GET      /trans
+| 200 |    532.2238ms |             ::1 | POST     /buy
+::1 - [Thu, 04 Jul 2019 13:55:21 +05] "GET /trans HTTP/1.1 200 999.4µs "PostmanRuntime/7.15.0" "
+[GIN] 2019/07/04 - 13:55:21 | 200 |     26.9836ms |             ::1 | GET      /trans
+::1 - [Thu, 04 Jul 2019 13:55:51 +05] "GET /menu HTTP/1.1 200 0s "PostmanRuntime/7.15.0" "
+[GIN] 2019/07/04 - 13:55:51 | 200 |       999.6µs |             ::1 | GET      /menu
+     ::1 | POST     /buy

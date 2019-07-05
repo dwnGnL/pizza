@@ -1,5 +1,5 @@
 {
     "connectUriDb": "root@tcp(localhost:3306)/pizza2?charset=utf8&parseTime=True&loc=Local",
     "port": "8001",
-    "logName": "log"
+    "logName": "error"
 }
